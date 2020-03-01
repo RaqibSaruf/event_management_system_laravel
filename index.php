@@ -92,7 +92,7 @@
 <!-- marquee section -->
 	<div class="mt-lg-3">
 		<div class="container">
-			<marquee class="bg-info" scrollamount="15" behavior="alternate">
+			<marquee class="bg-info" scrollamount="15">
 				<p style="font-family: Impact; font-size: 20pt;">
 					<span style="padding-left: 20px;">Notice!</span>
 				</p>
