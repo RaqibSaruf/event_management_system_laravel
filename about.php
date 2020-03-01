@@ -57,6 +57,8 @@
 		<div class="col-sm-8">
 			<div class="card">
 				<div class="card-header">abcd</div>
+
+				<div class="card-body" ></div>
 			</div>
 		</div>
 	</div>
