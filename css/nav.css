@@ -1,0 +1,30 @@
+.navbar-brand{
+	color: black;
+}
+
+.nav-tabs {
+	border-bottom: 0px solid red;
+}
+.nav-tabs .nav-item {
+  margin: 5px;
+}
+
+.nav-tabs .nav-item .nav-link {
+  display: block;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 0px;
+}
+
+.nav-tabs .nav-item .nav-link:hover, .nav-link:focus {
+  text-decoration: none;
+  color: red;
+  border: 0px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+	border: 0px;
+  border-bottom: 2px solid red;
+  background-color: transparent;
+  color: red;
+}
