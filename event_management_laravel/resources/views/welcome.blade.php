@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-<div class="cyan darken-1">
+<div class="grey lighten-5 text-black">
 <!--slider section-->
 	<div class="container">
 <!--Carousel Wrapper-->
@@ -46,12 +46,12 @@
 <br>
 
 <!-- Content Section -->
-<div class="cyan darken-2">
+
 
 	<div class="container">
 	
 		<div class="table-responsive-sm">
-			<table id="dtBasicExample" class="table table-bordered table-sm table-hover text-sm-center" cellspacing="0" width="100%">
+			<table id="dtBasicExample" class="table table-bordered table-sm table-hover text-sm-center text-black" cellspacing="0" width="100%">
 				<h2>Latest Events</h2>
 			  <thead>
 			    <tr>
@@ -93,7 +93,7 @@
 		</div>
 	
 	</div>
-</div>
+
 <!-- END Content Section -->
 
 </div>

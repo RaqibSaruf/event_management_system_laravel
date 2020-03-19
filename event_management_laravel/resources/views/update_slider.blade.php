@@ -25,14 +25,14 @@
 
 			<div class="input-group mt-3">
   				<div class="input-group-prepend">
-    				<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+    				<span class="input-group-text" id="inputGroupFileAddon01">Change Image &nbsp;<i class="fas fa-exchange-alt"></i></span>
   				</div>
   				<div class="custom-file">
     				<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="image">
-    			<label class="custom-file-label" for="inputGroupFile01">Change Image</label>
+    			<label class="custom-file-label" for="inputGroupFile01"></label>
   				</div>
 			</div>
-			<button class="btn btn-info my-4 btn-block" type="submit">Update Slider</button>
+			<button class="btn btn-info my-4 btn-block" type="submit"><i class="far fa-save"></i>&nbsp; Update Slider</button>
 		</div>
 		</form>
 	</div>

@@ -29,6 +29,13 @@ Route::post('/silder/{id}', 'SliderController@update_slider')->name('update_slid
 Route::get('/slider/{id}', 'SliderController@delete')->name('delete_slider');
 
 
+// latest event
 
+Route::get('/latest_event', 'LatestEventController@create')->name('latest_event');
+Route::post('/latest_event', 'LatestEventController@store')->name('store_latest_event');
+Route::get('/all_event', 'LatestEventController@all')->name('all_event');
+Route::get('/all_event/{id}', 'LatestEventController@edit')->name('edit_event');
+Route::post('/all_event/{id}', 'LatestEventController@update_event')->name('update_event');
+Route::get('/event/{e_id}/image/{i_id}', 'LatestEventController@delete_image')->name('delete_event_image');
 
 
