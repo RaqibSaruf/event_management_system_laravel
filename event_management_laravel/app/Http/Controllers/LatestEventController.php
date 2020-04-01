@@ -75,7 +75,8 @@ class LatestEventController extends Controller
 
 
 	public function all(){
-    	$events = latestEvent::simplePaginate(1);
+    	$events = latestEvent::Paginate(1);
+        $img[]= new latestEventImage();
 
     	foreach ($events as $event) {
     		$img[$event->id]= DB::table('latest_event_image')->select('image')->where('latest_events_id', '=', $event->id)->get();

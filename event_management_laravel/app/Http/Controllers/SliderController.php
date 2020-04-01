@@ -11,7 +11,7 @@ class SliderController extends Controller
 
     
     public function create(){
-        $sliders = Slider::simplePaginate(5);
+        $sliders = Slider::Paginate(5);
     	return view('slider')->with('Sliders',$sliders);   
         
 }

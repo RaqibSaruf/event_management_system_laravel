@@ -5,6 +5,8 @@
 <!--slider section-->
 	<div class="container">
 <!--Carousel Wrapper-->
+
+@if( ! $Sliders->isEmpty() )
 		<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
   <!--Indicators-->
   			<ol class="carousel-indicators">
@@ -18,7 +20,7 @@
   		@foreach( $Sliders as $slider )
        		<div class="carousel-item {{ $loop->first ? 'active' : '' }}">
        			<div class="view">
-           		<img class="center-block w-100" style="height: 350px;" src="{{ asset('public/uploads/slider/' .$slider->image) }}" alt="{{ $slider->title }}">
+           		<img class="center-block w-100" style="height: 450px;" src="{{ asset('public/uploads/slider/' .$slider->image) }}" alt="{{ $slider->title }}">
            		<div class="mask rgba-black-light"></div>
       			</div>
               	<div class="carousel-caption d-none d-md-block">
@@ -40,56 +42,51 @@
   <!--/.Controls-->
 		</div>
 <!--/.Carousel Wrapper-->
+  @endif
 	</div>
 <!-- END slider section-->
 
 <br>
 
+
 <!-- Content Section -->
 
 
-	<div class="container">
+	<div class="container-fluid">
 	
-		<div class="table-responsive-sm">
-			<table id="dtBasicExample" class="table table-bordered table-sm table-hover text-sm-center text-black" cellspacing="0" width="100%">
-				<h2>Latest Events</h2>
-			  <thead>
-			    <tr>
-			      <th class="th-sm">Name
+		<div class="row">
+			@if( ! $latest_event->isEmpty() )
+			<div class="col-lg-8">
+				<div class="card-body">
 
-			      </th>
-			      <th class="th-sm">Position
+					<h5 class="h5-responsive"><b>Latest Event</b></h5>
+				
+					<div class="list-group mt-3 mb-3">
+					@foreach($latest_event as $l_event)
 
-			      </th>
-			      <th class="th-sm">Office
+						<a href="{{ route('view_l_event',[$l_event->id]) }}" class="list-group-item list-group-item-action">@lang( $l_event->title )</a>
 
-			      </th>
-			      <th class="th-sm">Age
+					@endforeach
+					</div>
+					
+				</div>
+			</div>
+			@endif
+			@if( ! $upcoming_event->isEmpty() )
+			<div class="col-lg-4">
+				<div class="card-body">
+					<h5 class="h5-responsive"><b>Upcoming Event</b></h5>
+				
+					<div class="list-group mt-3 mb-3">
+					@foreach( $upcoming_event as $up_event )
 
-			      </th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <td class="td-sm">Tiger Nixon</td>
-			      <td class="td-sm">System Architect</td>
-			      <td class="td-sm">Edinburgh</td>
-			      <td class="td-sm">61</td>
-			  	</tr>
-			  	<tr>
-			      <td class="td-sm">Tiger Nixon</td>
-			      <td class="td-sm">System Architect</td>
-			      <td class="td-sm">Edinburgh</td>
-			      <td class="td-sm">61</td>
-			  	</tr>
-			  	<tr>
-			      <td class="td-sm">Tiger Nixon</td>
-			      <td class="td-sm">System Architect</td>
-			      <td class="td-sm">Edinburgh</td>
-			      <td class="td-sm">61</td>
-			  	</tr>
-			  </tbody>
-			</table>
+						<a href="{{ route('view_up_event',[$up_event->id]) }}" class="list-group-item list-group-item-action">@lang( $up_event->title )</a>
+
+					@endforeach
+					</div>
+				</div>
+			</div>
+			@endif
 		</div>
 	
 	</div>
@@ -97,6 +94,7 @@
 <!-- END Content Section -->
 
 </div>
+<br>
 
 @endsection
 

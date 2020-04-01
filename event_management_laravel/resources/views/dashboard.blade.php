@@ -3,7 +3,7 @@
 <div class="grey lighten-5">
 <div class="container pt-3 mt-3 pb-3 mb-3 d-flex justify-content-center">
 <div class="col-sm-4">
-	<div class="list-group">
+	<div class="list-group text-sm-center">
 					<!--Dropdown-->
 			<div class="dropdown">
 
@@ -16,7 +16,7 @@
 			  <div class="dropdown-menu blue-grey lighten-5 border border-dark-2">
 			    <a class="dropdown-item border border-dark-2" href="{{ route('slider')}}">Slider</a>
 			    <a class="dropdown-item border border-dark-2" href="{{ route('latest_event') }}">Latest Event</a>
-			    <a class="dropdown-item border border-dark-2" href="#">Upcoming Event</a>
+			    <a class="dropdown-item border border-dark-2" href="{{ route('upcoming_event') }}">Upcoming Event</a>
 			  </div>
 			</div>
 			<!--/Dropdown-->

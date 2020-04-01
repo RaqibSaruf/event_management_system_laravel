@@ -59,7 +59,6 @@
 		<table class="table table-stripped table-bordered table-sm table-hover text-sm-center">
 			<thead class="thead-dark">
 				<tr>
-					<th class="th-sm" scope="col">ID</th>
 					<th class="th-sm" scope="col">Title</th>
 					<th class="th-sm" scope="col">Image</th>
 					<th class="th-sm" scope="col">Edit</th>
@@ -69,7 +68,6 @@
 			<tbody>
 				@foreach($Sliders as $slider)
 				<tr>
-					<td class="td-sm">{{ $slider->id }}</td>
 					<td class="td-sm">{{ $slider->title }}</td>
 					<td class="td-sm"><img class="center-block" style="height: 100px; width: 100px;" src="{{ asset('public/uploads/slider/' .$slider->image) }}" alt="{{ $slider->title }}"></td>
 					<td class="td-sm"><a href="{{ route('edit_slider',[$slider->id]) }}" class="btn btn-info"><i class="far fa-edit"></i></a></td>
