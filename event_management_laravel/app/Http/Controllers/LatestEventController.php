@@ -13,10 +13,7 @@ class LatestEventController extends Controller
 {
 	
     public function create(){
-    	
-
-    	return view('latestEvent');  
-        
+    	return view('latestEvent');       
 }
 
 

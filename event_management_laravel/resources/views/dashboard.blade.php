@@ -31,9 +31,8 @@
 
 			  <!--Menu-->
 			  <div class="dropdown-menu blue-grey lighten-5 border border-dark-2">
-			    <a class="dropdown-item border border-dark-2" href="#">Content 1</a>
-			    <a class="dropdown-item border border-dark-2" href="#">Content 2</a>
-			    <a class="dropdown-item border border-dark-2" href="#">Content 3</a>
+			    <a class="dropdown-item border border-dark-2" href="{{ route('description')}}">Description</a>
+			    <a class="dropdown-item border border-dark-2" href="{{ route('executive')}}">Executive Members</a>
 			  </div>
 			</div>
 			<!--/Dropdown-->

@@ -8,6 +8,8 @@ use App\Slider;
 use App\latestEvent;
 use App\latestEventImage;
 use App\UpcomingEvent;
+use App\description;
+use App\executive;
 
 class EventController extends Controller
 {
@@ -26,9 +28,8 @@ class EventController extends Controller
     	$l_event = latestEvent::find($id);
         $image[]= new latestEventImage();
         $up_event= NULL;
-    	
+  	
     	$image= DB::table('latest_event_image')->select('image')->where('latest_events_id', '=', $l_event->id)->get();
-    	
 
     	return view('ViewEvent')->with(compact('l_event','image','up_event'));
     }
@@ -41,6 +42,12 @@ class EventController extends Controller
     	return view('ViewEvent')->with(compact('l_event','image','up_event'));
     }
 
+
+    public function about(){
+        $description = description::all();
+        $executives = executive::all();
+        return view('about')->with(compact('description','executives'));   
+    }
     
     
 

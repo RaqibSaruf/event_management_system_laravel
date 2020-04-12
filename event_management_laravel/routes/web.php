@@ -17,6 +17,7 @@ Route::get('/', 'EventController@index')->name('home');
 Route::get('/dashboard', 'EventController@dashboard')->name('dashboard');
 Route::get('/view/latestEvent/{id}', 'EventController@view_l')->name('view_l_event');
 Route::get('/view/UpcomingEvent/{id}', 'EventController@view_up')->name('view_up_event');
+Route::get('/about', 'EventController@about')->name('about');
 
 //slider
 
@@ -43,3 +44,15 @@ Route::post('/upcoming_event', 'UpcomingEventController@store')->name('store_upc
 Route::get('/upcoming_event/edit/{id}', 'UpcomingEventController@edit')->name('edit_upcoming_event');
 Route::post('/upcoming_event/{id}', 'UpcomingEventController@update_upcoming_event')->name('update_upcoming_event');
 Route::get('/upcoming_event/{id}', 'UpcomingEventController@delete')->name('delete_upcoming_event');
+
+//description
+Route::get('/description', 'DescriptionController@create')->name('description');
+Route::post('/description/{id}', 'DescriptionController@store')->name('store_description');
+
+//executive
+
+Route::get('/executive', 'ExecutiveController@create')->name('executive');
+Route::post('/executive', 'ExecutiveController@store')->name('store_executive');
+Route::get('/edit/executive/{id}', 'ExecutiveController@edit')->name('edit_executive');
+Route::post('/executive/{id}', 'ExecutiveController@update_slider')->name('update_executive');
+Route::get('/executive/{id}', 'ExecutiveController@delete')->name('delete_executive');
